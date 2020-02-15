@@ -16,7 +16,10 @@ using System.Windows.Shapes;
 namespace DocViewer_SqlServerEdition
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// DocViewer SqlServer Eddition
+    /// by
+    /// lzlocki
+    /// AD : 2020
     /// </summary>
     public partial class MainWindow : Window
     {
