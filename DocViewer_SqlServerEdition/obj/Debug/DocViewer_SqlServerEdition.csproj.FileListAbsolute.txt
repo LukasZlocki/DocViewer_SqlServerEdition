@@ -1,0 +1,14 @@
+C:\1 DotNetProjects\DocViewer_SqlServerEdition\DocViewer_SqlServerEdition\bin\Debug\DocViewer_SqlServerEdition.exe.config
+C:\1 DotNetProjects\DocViewer_SqlServerEdition\DocViewer_SqlServerEdition\bin\Debug\DocViewer_SqlServerEdition.exe
+C:\1 DotNetProjects\DocViewer_SqlServerEdition\DocViewer_SqlServerEdition\bin\Debug\DocViewer_SqlServerEdition.pdb
+C:\1 DotNetProjects\DocViewer_SqlServerEdition\DocViewer_SqlServerEdition\obj\Debug\DocViewer_SqlServerEdition.csprojAssemblyReference.cache
+C:\1 DotNetProjects\DocViewer_SqlServerEdition\DocViewer_SqlServerEdition\obj\Debug\MainWindow.g.cs
+C:\1 DotNetProjects\DocViewer_SqlServerEdition\DocViewer_SqlServerEdition\obj\Debug\App.g.cs
+C:\1 DotNetProjects\DocViewer_SqlServerEdition\DocViewer_SqlServerEdition\obj\Debug\DocViewer_SqlServerEdition_MarkupCompile.cache
+C:\1 DotNetProjects\DocViewer_SqlServerEdition\DocViewer_SqlServerEdition\obj\Debug\DocViewer_SqlServerEdition_MarkupCompile.lref
+C:\1 DotNetProjects\DocViewer_SqlServerEdition\DocViewer_SqlServerEdition\obj\Debug\MainWindow.baml
+C:\1 DotNetProjects\DocViewer_SqlServerEdition\DocViewer_SqlServerEdition\obj\Debug\DocViewer_SqlServerEdition.g.resources
+C:\1 DotNetProjects\DocViewer_SqlServerEdition\DocViewer_SqlServerEdition\obj\Debug\DocViewer_SqlServerEdition.Properties.Resources.resources
+C:\1 DotNetProjects\DocViewer_SqlServerEdition\DocViewer_SqlServerEdition\obj\Debug\DocViewer_SqlServerEdition.csproj.GenerateResource.cache
+C:\1 DotNetProjects\DocViewer_SqlServerEdition\DocViewer_SqlServerEdition\obj\Debug\DocViewer_SqlServerEdition.exe
+C:\1 DotNetProjects\DocViewer_SqlServerEdition\DocViewer_SqlServerEdition\obj\Debug\DocViewer_SqlServerEdition.pdb
