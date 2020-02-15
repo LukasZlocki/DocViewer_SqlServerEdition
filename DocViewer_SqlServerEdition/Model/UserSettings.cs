@@ -11,5 +11,6 @@ namespace DocViewer_SqlServerEdition.Model
         public bool IsLoadingStation { get; set; }
         public string  ResourcesPath { get; set; }
         public string SqlConnectionString { get; set; }
+        
     }
 }

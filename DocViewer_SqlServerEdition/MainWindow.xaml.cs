@@ -24,9 +24,15 @@ namespace DocViewer_SqlServerEdition
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
+            //ToDo : Code loading data from txt file
+            UserSettings UserSettings = new UserSettings();
+            IOSettingsAdapter IoAdapter = new IOSettingsAdapter();
+            IoAdapter.LoadSettings(ref UserSettings);
+           
         }
 
         #region BUTTONS
@@ -51,7 +57,8 @@ namespace DocViewer_SqlServerEdition
         // Load instruction from database
         private void LoadDocuments(string partNb, ref Document instruction)
         {
-            // ToDo : code loaing instruction from sql server
+            // ToDo : code loading instruction from sql server
+            SqlAdapter sqlAdapter = new SqlAdapter();
 
         }
 

@@ -3,6 +3,11 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# My igonored
+DocViewer_SqlServerEdition/obj/Debug/MainWindow.baml
+.gitignore
+v16
+
 # User-specific files
 *.rsuser
 *.suo

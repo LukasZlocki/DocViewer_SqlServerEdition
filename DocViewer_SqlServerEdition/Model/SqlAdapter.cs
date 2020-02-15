@@ -10,8 +10,11 @@ namespace DocViewer_SqlServerEdition.Model
     {
         // ToDo : Code object to handle with user settings
         static string USER_SETTINGS_CONNECTION_STRING = "";
-        
 
+        public SqlAdapter()
+        {
+
+        }
         // ToDo : Code connection to database and extaction of proper document
 
     }

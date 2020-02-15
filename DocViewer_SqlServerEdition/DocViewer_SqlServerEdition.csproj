@@ -69,6 +69,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Document.cs" />
+    <Compile Include="Model\IOSettingsAdapter.cs" />
+    <Compile Include="Model\SqlAdapter.cs" />
+    <Compile Include="Model\UserSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
