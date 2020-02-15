@@ -55,10 +55,10 @@ namespace DocViewer_SqlServerEdition
 
 
         // Load instruction from database
-        private void LoadDocuments(string partNb, ref Document instruction)
+        private void LoadDocuments(string partNb, ref Document instruction, UserSettings settings )
         {
             // ToDo : code loading instruction from sql server
-            SqlAdapter sqlAdapter = new SqlAdapter();
+            SqlAdapter sqlAdapter = new SqlAdapter(settings);
 
         }
 
