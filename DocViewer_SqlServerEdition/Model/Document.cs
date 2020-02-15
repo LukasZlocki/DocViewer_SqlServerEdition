@@ -8,7 +8,10 @@ namespace DocViewer_SqlServerEdition.Model
 {
     class Document
     {
-        public string PartName { get; set; }
-        public string DocumentName { get; set; }
+        public int Id { get; set; }
+        public string PartNumber { get; set; }
+        public string PartDescription { get; set; }
+        public string LoadingDocumentName { get; set; }
+        public string UnloadingDocumentName { get; set; }
     }
 }
