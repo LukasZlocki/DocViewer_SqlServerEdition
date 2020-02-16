@@ -56,6 +56,7 @@ namespace DocViewer_SqlServerEdition
         #endregion
 
 
+        #region Load & show document
         // Load instruction from database
         private void LoadDocuments(string partNb, ref Document instruction, UserSettings settings )
         {
@@ -95,6 +96,20 @@ namespace DocViewer_SqlServerEdition
                    
 
         }
+
+        #endregion
+
+
+        #region Window menu - user settings
+
+        private void OrdersWindowRun(object sender, RoutedEventArgs e)
+        {
+            OrdersStatusWindow ordersStatusWindow = new OrdersStatusWindow();
+            ordersStatusWindow.Show();
+        }
+
+        #endregion
+
 
     }
 }

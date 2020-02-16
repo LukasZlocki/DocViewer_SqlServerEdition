@@ -10,14 +10,12 @@
         <!-- 
         Menu for main window  
         <!-->
-
-        <!-- to jest menu ustawien
+        
         <Menu>
             <MenuItem Header="Ustawienia">
                 <MenuItem  Header="Ustawienia programu" Click="SettingsWindowRun" />
             </MenuItem>
         </Menu>
-<!-->
 
         <StackPanel Margin="0,0,0,0" Height="150" VerticalAlignment="Bottom">
             <StackPanel.Background>
