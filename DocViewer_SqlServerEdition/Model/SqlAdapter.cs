@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace DocViewer_SqlServerEdition.Model
 {    
@@ -12,38 +13,31 @@ namespace DocViewer_SqlServerEdition.Model
     {
         string CONNECTION_STRING;
 
+        // Constr
         public SqlAdapter(UserSettings userSettings)
         {
             CONNECTION_STRING = userSettings.SqlConnectionString;
         }
 
-        
+        // GET 
         public void PullInstructionFromSql(string partNumber, ref Document document)
-        {
-            string _query = "SELECT " + partNumber + " FROM PaintingInstructions";
+        {          
+            string _query = "SELECT * FROM PaintingInstructions WHERE PartNumber = '" + partNumber + "'";
 
-            DataTable dataTable = new DataTable();
-
-            // ToDo : Code connection to database and extaction of proper document
             SqlConnection SqlConn = new SqlConnection(CONNECTION_STRING);
             SqlCommand SqlCmd = new SqlCommand(_query, SqlConn);
             SqlConn.Open();
 
-            SqlDataAdapter dA = new SqlDataAdapter();
-            dA.Fill(dataTable);
-            SqlConn.Close();
-            dA.Dispose();
-
-           foreach( DataRow dr in dataTable.Rows)
+            SqlDataReader reader = SqlCmd.ExecuteReader();
+            while(reader.Read())
             {
-                document.Id = Convert.ToInt32(dr["Id"]);
-                document.PartNumber = Convert.ToString(dr["PartNumber"]);
-                document.PartDescription = Convert.ToString(dr["PartDescritpion"]);
-                document.LoadingDocumentName = Convert.ToString(dr["DocumentLoadingArea"]);
-                document.UnloadingDocumentName = Convert.ToString(dr["DocumentUnloadingArea"]);
-
+                document.Id = reader.GetInt32(0);
+                document.PartNumber = reader.GetString(1);
+                document.PartDescription = reader.GetString(2);
+                document.LoadingDocumentName = reader.GetString(3);
+                document.UnloadingDocumentName = reader.GetString(4);
             }
-
+            SqlConn.Close();
         }
 
     }
