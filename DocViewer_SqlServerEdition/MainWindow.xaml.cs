@@ -89,7 +89,7 @@ namespace DocViewer_SqlServerEdition
             }
             catch
             {
-                // ToDo : Code showing "document not awailable on screen" - new method to handle errors is needed
+                // ToDo : Code showing "document not awailable on screen" - new method to handle errors is needed.
             }
                 
                    
