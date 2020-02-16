@@ -13,7 +13,7 @@ namespace DocViewer_SqlServerEdition.Model
     {
         string CONNECTION_STRING;
 
-        // Constr
+        // Constructor
         public SqlAdapter(UserSettings userSettings)
         {
             CONNECTION_STRING = userSettings.SqlConnectionString;
