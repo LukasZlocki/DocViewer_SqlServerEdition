@@ -26,7 +26,8 @@ namespace DocViewer_SqlServerEdition.Model
                     {
                         if (_counter == 1) { userSettings.IsLoadingStation = Convert.ToBoolean(_line); }
                         if (_counter == 2) { userSettings.ResourcesPath = Convert.ToString(_line); }
-                        if (_counter == 3) { userSettings.SqlConnectionString = Convert.ToString(_line); }
+                        if (_counter == 3) { userSettings.InstructionFileExtension = Convert.ToString(_line); }
+                        if (_counter == 4) { userSettings.SqlConnectionString = Convert.ToString(_line); }
                         _counter++;
                     } while ((_line = sr.ReadLine()) != null);
                 }
