@@ -24,12 +24,14 @@ namespace DocViewer_SqlServerEdition
     /// </summary>
     public partial class MainWindow : Window
     {
+        UserSettings UserSettings;
 
         public MainWindow()
         {
             InitializeComponent();
-            //ToDo : Code loading data from txt file
-            UserSettings UserSettings = new UserSettings();
+
+            // Load user settings from file
+            UserSettings = new UserSettings();
             IOSettingsAdapter IoAdapter = new IOSettingsAdapter();
             IoAdapter.LoadSettings(ref UserSettings);
            
@@ -44,10 +46,10 @@ namespace DocViewer_SqlServerEdition
             _partNumber = txtBoxID.Text;
 
             // Load instruction from database
-            LoadDocuments(_partNumber, ref Instruction);
+            LoadDocuments(_partNumber, ref Instruction, UserSettings);
 
             // Show instruction on user screen
-            ShowInstructionOnScreen();
+            ShowInstructionOnScreen(Instruction, UserSettings);
             
         }
 
@@ -59,13 +61,38 @@ namespace DocViewer_SqlServerEdition
         {
             // ToDo : code loading instruction from sql server
             SqlAdapter sqlAdapter = new SqlAdapter(settings);
-
+            sqlAdapter.PullInstructionFromSql(partNb, ref instruction);
         }
 
         // Show instruction on user screen
-        private void ShowInstructionOnScreen()
+        private void ShowInstructionOnScreen(Document instruction, UserSettings userSettings)
         {
             // ToDo : code showing instruction on user screen
+            string resourcesPathLoadingZone = userSettings.ResourcesPath + "\\" + instruction.LoadingDocumentName + UserSettings.InstructionFileExtension;
+            string resourcesPathUnloadingZone = userSettings.ResourcesPath + "\\" + instruction.UnloadingDocumentName + UserSettings.InstructionFileExtension;
+            string resourcePath = "";
+
+            // Set resurces path according to user settings - loading / unloading area
+            if (userSettings.IsLoadingStation == true) 
+            {
+                resourcePath = resourcesPathLoadingZone;
+            }
+            else
+            {
+                resourcePath = resourcesPathUnloadingZone;
+            }
+
+            try
+            {
+                ImageSource imagesource = new BitmapImage(new Uri(resourcePath));
+                ImageShow.Source = imagesource;
+            }
+            catch
+            {
+                // ToDo : Code showing "document not awailable on screen"
+            }
+                
+                    
 
         }
 
