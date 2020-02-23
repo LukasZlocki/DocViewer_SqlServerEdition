@@ -102,10 +102,10 @@ namespace DocViewer_SqlServerEdition
 
         #region Window menu - user settings
 
-        private void OrdersWindowRun(object sender, RoutedEventArgs e)
+        private void SettingsWindowRun(object sender, RoutedEventArgs e)
         {
-            OrdersStatusWindow ordersStatusWindow = new OrdersStatusWindow();
-            ordersStatusWindow.Show();
+            SettingsWindow settingsWindow = new SettingsWindow();
+            settingsWindow.Show();
         }
 
         #endregion
