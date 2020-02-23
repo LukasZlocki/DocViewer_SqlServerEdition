@@ -10,9 +10,6 @@ namespace DocViewer_SqlServerEdition.Model
 {
     class IOSettingsAdapter
     {
-        // ToDo : Code writing / loading user settings
-
-
         public void LoadSettings(ref UserSettings userSettings)
         {
             string _line = "";

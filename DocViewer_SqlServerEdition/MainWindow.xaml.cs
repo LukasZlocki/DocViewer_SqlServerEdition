@@ -17,7 +17,7 @@ using System.Windows.Shapes;
 namespace DocViewer_SqlServerEdition
 {
     /// <summary>
-    /// DocViewer SqlServer Eddition
+    /// DocViewer SqlServer Edition
     /// by
     /// lzlocki
     /// AD : 2020
@@ -33,8 +33,7 @@ namespace DocViewer_SqlServerEdition
             // Load user settings from file
             UserSettings = new UserSettings();
             IOSettingsAdapter IoAdapter = new IOSettingsAdapter();
-            IoAdapter.LoadSettings(ref UserSettings);
-           
+            IoAdapter.LoadSettings(ref UserSettings);          
         }
 
         #region BUTTONS
@@ -52,7 +51,6 @@ namespace DocViewer_SqlServerEdition
             ShowInstructionOnScreen(Instruction, UserSettings);
             
         }
-
         #endregion
 
 
@@ -60,7 +58,6 @@ namespace DocViewer_SqlServerEdition
         // Load instruction from database
         private void LoadDocuments(string partNb, ref Document instruction, UserSettings settings )
         {
-            // ToDo : code loading instruction from sql server
             SqlAdapter sqlAdapter = new SqlAdapter(settings);
             sqlAdapter.PullInstructionFromSql(partNb, ref instruction);
         }
@@ -68,7 +65,6 @@ namespace DocViewer_SqlServerEdition
         // Show instruction on user screen
         private void ShowInstructionOnScreen(Document instruction, UserSettings userSettings)
         {
-            // ToDo : code showing instruction on user screen
             string resourcesPathLoadingZone = userSettings.ResourcesPath + "\\" + instruction.LoadingDocumentName + UserSettings.InstructionFileExtension;
             string resourcesPathUnloadingZone = userSettings.ResourcesPath + "\\" + instruction.UnloadingDocumentName + UserSettings.InstructionFileExtension;
             string resourcePath = "";
@@ -91,12 +87,8 @@ namespace DocViewer_SqlServerEdition
             catch
             {
                 // ToDo : Code showing "document not awailable on screen" - new method to handle errors is needed.
-            }
-                
-                   
-
+            }                                 
         }
-
         #endregion
 
 
